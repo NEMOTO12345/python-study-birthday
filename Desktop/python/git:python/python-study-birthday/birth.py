@@ -15,9 +15,14 @@ import datetime
 weekdays = ['月','火','水','木','金','土','日']
 today = datetime.date.today()
 birth = datetime.date(1997,1,2)
+anv = birth + datetime.timedelta(days=10000)
+anv_list = (str(anv).split('-'))
 
 lifelen = today - birth
 # ①
 print(name,'さんは',weekdays[birth.weekday()],'曜日生まれです。')
 # ②
-print(name,'さんは',lifelen.days,'生きています。')
+print(name,'さんは',lifelen.days,'日生きています。')
+# ③
+print(name,'さんの10000日の記念日は',anv_list[0],'年',anv_list[1],'月',anv_list[2],'日生きています。')
+
