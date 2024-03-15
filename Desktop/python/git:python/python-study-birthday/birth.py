@@ -12,9 +12,12 @@ name = input('名前を入力してください→')
 
 import datetime
 
+weekdays = ['月','火','水','木','金','土','日']
 today = datetime.date.today()
-print(today)
+birth = datetime.date(1997,1,2)
 
-lifelen = today - datetime.date(1997,1,2)
-
+lifelen = today - birth
+# ①
+print(name,'さんは',weekdays[birth.weekday()],'曜日生まれです。')
+# ②
 print(name,'さんは',lifelen.days,'生きています。')
